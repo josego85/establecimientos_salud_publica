@@ -8,7 +8,9 @@ Los establecimientos son:
 * Puestos de Salud
 * Unidades de Salud Familiar 
 
-* [Datos] (https://www.datos.gov.py/dataset/establecimientos-de-salud)
-* [Demo](http://proyectosbeta.net/establecimientos_salud_publica/src/)
+
+
+[Datos] (https://www.datos.gov.py/dataset/establecimientos-de-salud)
+[Demo](http://proyectosbeta.net/establecimientos_salud_publica/src/)
  
 
