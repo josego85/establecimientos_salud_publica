@@ -22,13 +22,22 @@ function cargarMapa(){
 
 	// Hacer llamada ajax.
 	$.ajax({
-		url: "datos/establecimientos.geojson",
+		url: "recursos/datos/establecimientos.geojson",
 		dataType: 'json',
 		type: 'post',
 		success: function(datos){
 			// Agregando datos GeoJSON en una capa (layer) vectorial.
 			layerEstablecimientos = L.geoJson(datos, {
-				onEachFeature: onEachFeature
+				onEachFeature: onEachFeature,
+				pointToLayer: function(p_feature, p_latlng) {
+	                var v_icono =  L.icon({
+	                    iconUrl: 'recursos/img/hospital_48px.png',
+	                    iconSize: [48, 48]
+	                });
+	                return L.marker(p_latlng, {
+	                	icon: v_icono
+	                });
+            	}
 			}).addTo(mapa);
 		},
 		error: function(msg) {
