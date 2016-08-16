@@ -11,6 +11,6 @@ Los establecimientos son:
 
 
 [Datos] (https://www.datos.gov.py/dataset/establecimientos-de-salud)
-[Demo](http://proyectosbeta.net/establecimientos_salud_publica/src/)
+[Sitio](http://proyectosbeta.net/establecimientos_salud_publica/src/)
  
 
