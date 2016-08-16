@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Establecimientos de Salud P&uacute;blica Paraguaya</title>
+
+        <!– Estilos –>
+        <link rel="stylesheet" href="libs/leaflet/leaflet.css" charset="utf-8"/>
+        <link rel='stylesheet' href='css/estilos.css' charset="utf-8"/>
+
+        <!– Archivos JS –>
+        <script src="libs/leaflet/leaflet.js" type="text/javascript" charset="utf-8"></script>
+        <script src="libs/jquery/jquery-2.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/MapaOSM.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body onLoad="cargarMapa()">
+        <div class="container">
+            <div class="row">
+                <div id="map-outer" class="col-md-12">
+                    <div class="col-md-4">
+                        <h2>
+                            <center>Establecimientos de Salud P&uacute;blica Paraguaya</center>
+                        </h2>
+                    </div>
+                    <div id="map-container" class="col-md-8"></div>
+                </div><!-- map-outer -->
+            </div> <!-- row -->
+        </div><!-- container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <a href="https://www.datos.gov.py/dataset/establecimientos-de-salud" target="blank">Datos utilizados</a>
+                </div>
+            </div> <!-- row -->
+        </div><!-- container -->
+    </body>
+</html>
