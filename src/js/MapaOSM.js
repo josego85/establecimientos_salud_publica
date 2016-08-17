@@ -18,7 +18,8 @@ function cargarMapa(){
           'OpenStreetMap Contributors </a> Tiles \u00a9 HOT'
 	}).addTo(mapa);
 
-
+	// Cluster de marcadores.
+	var cluster_marcadores;
 
 	// Hacer llamada ajax.
 	$.ajax({
@@ -26,7 +27,6 @@ function cargarMapa(){
 		dataType: 'json',
 		type: 'post',
 		success: function(datos){
-			// Agregando datos GeoJSON en una capa (layer) vectorial.
 			layerEstablecimientos = L.geoJson(datos, {
 				onEachFeature: onEachFeature,
 				pointToLayer: function(p_feature, p_latlng) {
@@ -38,7 +38,10 @@ function cargarMapa(){
 	                	icon: v_icono
 	                });
             	}
-			}).addTo(mapa);
+			});
+			cluster_marcadores = L.markerClusterGroup();   				// Se crea un cluster group.
+			cluster_marcadores.addLayer(layerEstablecimientos);   		// Agrega el Layer GeoJSON al cluster group.
+			mapa.addLayer(cluster_marcadores);           				// Agrega el cluster group al mapa.
 		},
 		error: function(msg) {
 			console.log("Error!!!");
