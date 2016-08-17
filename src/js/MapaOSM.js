@@ -5,11 +5,18 @@ function cargarMapa(){
 	// Paraguay.
 	var longitud = -58.4309129;
 	var latitud = -23.8961407;
+
 	var zoom = 6;
 	var layerEstablecimientos;
 
+	// Cluster de marcadores.
+	var cluster_marcadores;
+
     // Se instancia el objeto mapa.
-	mapa =  L.map('map-container').setView([latitud, longitud], zoom);
+	mapa =  L.map('map-container', {
+		minZoom: 4,
+		maxZoom: 17
+	}).setView([latitud, longitud], zoom);
 
 	// Humanitarian Style.
 	L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
@@ -17,9 +24,6 @@ function cargarMapa(){
 		attribution: 'Data \u00a9 <a href="http://www.openstreetmap.org/copyright">' +
           'OpenStreetMap Contributors </a> Tiles \u00a9 HOT'
 	}).addTo(mapa);
-
-	// Cluster de marcadores.
-	var cluster_marcadores;
 
 	// Hacer llamada ajax.
 	$.ajax({
