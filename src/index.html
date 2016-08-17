@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Establecimientos de Salud P&uacute;blica Paraguaya</title>
 
         <!– Estilos –>
@@ -8,6 +12,7 @@
         <link rel="stylesheet" href="libs/leaflet/plugins/Leaflet.markercluster/MarkerCluster.css" charset="utf-8"/>
         <link rel="stylesheet" href="libs/leaflet/plugins/Leaflet.markercluster/MarkerCluster.Default.css" charset="utf-8"/>
         <link rel='stylesheet' href='css/estilos.css' charset="utf-8"/>
+        <link rel='stylesheet' href='css/responsive-text-alignment.css' charset="utf-8"/>
 
         <!– Archivos JS –>
         <script src="libs/leaflet/leaflet.js" type="text/javascript" charset="utf-8"></script>
@@ -16,24 +21,22 @@
         <script src="js/MapaOSM.js" type="text/javascript" charset="utf-8"></script>
     </head>
     <body onLoad="cargarMapa()">
-        <div class="container">
-            <div class="row">
-                <div id="map-outer" class="col-md-12">
-                    <div class="col-md-4">
-                        <h2>
-                            <center>Establecimientos de Salud P&uacute;blica Paraguaya</center>
-                        </h2>
-                    </div>
-                    <div id="map-container" class="col-md-8"></div>
-                </div><!-- map-outer -->
-            </div> <!-- row -->
-        </div><!-- container -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <a href="https://www.datos.gov.py/dataset/establecimientos-de-salud" target="blank">Datos utilizados</a>
+        <div class="row-fluid">
+            <div class="span12">
+                <h2 class="text-xs-center">Establecimientos de Salud P&uacute;blica Paraguaya</h2>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="map-container" class="map"></div>
                 </div>
-            </div> <!-- row -->
-        </div><!-- container -->
+           </div>
+       </div>
+       <div class="row-fluid">
+           <div class="span12">
+               <a href="https://www.datos.gov.py/dataset/establecimientos-de-salud" target="blank">Datos utilizados</a>
+           </div>
+       </div>
     </body>
 </html>

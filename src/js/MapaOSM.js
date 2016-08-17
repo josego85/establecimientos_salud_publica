@@ -2,10 +2,10 @@
 var mapa = null;
 
 function cargarMapa(){
-	// Asuncion - Paraguay.
-	var longitud = -57.6309129;
-	var latitud = -25.2961407;
-	var zoom = 7;
+	// Paraguay.
+	var longitud = -58.4309129;
+	var latitud = -23.8961407;
+	var zoom = 6;
 	var layerEstablecimientos;
 
     // Se instancia el objeto mapa.

@@ -1,19 +1,22 @@
-html {
+/*html {
     height: 100%;
     width: 100%;
-}
+}*/
 
 body {
-    height: 100%;
+    /*height: 100%;
     width: 100%;
-    background-color: #B4C4C7;
+    background-color: #B4C4C7;*/
+    /*padding-top: 60px;*/
 }
+
 
 #map-container {
-    height: 400px;
+  height: 400px;
+  width: 100%;
 }
 
-#map-outer {
+/*#map-outer {
     height: 480px;
     padding: 20px;
     border: 2px solid #CCC;
@@ -25,4 +28,4 @@ body {
     #map-outer  {
         height: 650px
     }
-}
+}*/
