@@ -5,6 +5,7 @@ function cargarMapa(){
 	// Paraguay.
 	var longitud = -58.4309129;
 	var latitud = -23.8961407;
+	var bounds = new L.LatLngBounds(new L.LatLng(-24.631,-58.399), new L.LatLng(-22.400,-58.399));
 
 	var zoom = 6;
 	var layerEstablecimientos;
@@ -15,7 +16,8 @@ function cargarMapa(){
     // Se instancia el objeto mapa.
 	mapa =  L.map('map-container', {
 		minZoom: 4,
-		maxZoom: 17
+		maxZoom: 17,
+		maxBounds: bounds
 	}).setView([latitud, longitud], zoom);
 
 	// Humanitarian Style.
